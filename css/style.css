@@ -76,6 +76,10 @@ header{
     
 }
 
+.nav-bar a:hover{
+	text-decoration:none;
+}
+
 @media (min-width: 768px)
 .forced {
     display: inline-block!important;
