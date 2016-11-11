@@ -234,7 +234,7 @@ background-color:#2D3D50 !important;
 }
 
 
-@media only screen and (max-width : 480px) { /* mobile up to 480px wide --------------------- */
+@media only screen and (max-width : 767px) { /* mobile up to 480px wide --------------------- */
     
     .logo{width:30%; height:auto; display: block; margin:0 auto; margin-top:10px;}
     .nav-bar li{padding: 14px;}
