@@ -60,7 +60,7 @@ header{
 
 .nav-bar a {
 	color:#2d3d50;
-    font-family:'Avenir Next';
+    font-family:'Avenir Next', sans-serif;
     font-size:150%;
     margin-left:30px;
     
