@@ -1,30 +1,27 @@
 <?php
- 
-if(isset($_POST['email'])) {
+
+if(isset($_POST['emailfrom'])) {
  
      
  
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+    // Subject and email where the info is going to be sent
  
     $email_to = "dorsn.play@gmail.com";
  
     $email_subject = ($_POST['product_service']);
- 
-     
- 
-     
- 
+    
+
    function died($error) {
  
-        // your error code can go here
+        // Error code
  
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "We are very sorry, but there were error(s) found with the form you submitted. <br> ";
  
-      /*  echo "These errors appear below.<br /><br />"; */
+      	echo "These errors appear below.<br><br>"; 
  
-        echo $error."<br /><br />";
+        echo $error."<br><br>";
  
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "Please go back and fix these errors.<br><br>";
  
         die();
  
@@ -34,31 +31,43 @@ if(isset($_POST['email'])) {
  
     // validation expected data exists
  
-    if(!isset($_POST['full_name']) ||
+	if(!isset($_POST['full_name'])){ 
+		
+		died('A full name must be submitted.');       
+	} 
        
-        !isset($_POST['company']) ||
+        if (!isset($_POST['company'])){ 
+		
+		died('A company name must be submitted.');       
+ } 
        
-        !isset($_POST['emailfrom']) ||
+        if(!isset($_POST['emailfrom'])){ 
+		
+		died('An email address must be submitted.');       
+ } 
  
-        !isset($_POST['product_service']) ||
+        if(!isset($_POST['product_service']))
+			{ 
+		
+		died('A service or product must be submitted.');       
+ } 
  
-        !isset($_POST['inquiry'])) {
- 
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
- 
-    }
+        if(!isset($_POST['inquiry'])) { 
+		
+		died('Some detail information must be submitted.');       
+ } 
  
      
  
-    $full_name = $_POST['full_name']; // required
+    $full_name = $_POST['full_name']; // d
  
-    $company = $_POST['company']; // required
+    $company = $_POST['company']; // d
  
-    $email_from = $_POST['email']; // required
+    $email_from = $_POST['emailfrom']; // d
  
-    $product_service = $_POST['product_service']; // required
+    $product_service = $_POST['product_service']; // d
  
-    $inquiry = $_POST['inquiry']; // required
+    $inquiry = $_POST['inquiry']; // d
  
      
  
@@ -118,7 +127,7 @@ if(isset($_POST['email'])) {
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
-    $email_message .= "Service / Product: ".clean_string($service_product)."\n";
+    $email_message .= "Service / Product: ".clean_string($product_service)."\n";
  
     $email_message .= "Inquiry: ".clean_string($inquiry)."\n";
  
@@ -136,20 +145,14 @@ $headers = 'From: '.$email_from."\r\n".
  
 @mail($email_to, $email_subject, $email_message, $headers);  
  
-?>
+
+
+ 
+ 
+	/*-- success html here */
  
  
  
-<!-- include your own success html here -->
- 
- 
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
- 
- 
-<?php
- 
-}
- 
-?>
+echo "Thank you for contacting us. We will be in touch with you very soon";
+	
+} ?>
