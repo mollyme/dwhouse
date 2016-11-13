@@ -155,4 +155,8 @@ $headers = 'From: '.$email_from."\r\n".
  
 echo "Thank you for contacting us. We will be in touch with you very soon";
 	
+<<<<<<< HEAD
 } ?>
+=======
+} ?>
+>>>>>>> f883f97e26e5ff4ab6f8bb0cc55342eb50925ed0
