@@ -14,7 +14,7 @@ if(isset($_POST['email'])) {
  
      
  
-  /*  function died($error) {
+   function died($error) {
  
         // your error code can go here
  
@@ -35,16 +35,18 @@ if(isset($_POST['email'])) {
     // validation expected data exists
  
     if(!isset($_POST['full_name']) ||
+       
+        !isset($_POST['company']) ||
+       
+        !isset($_POST['emailfrom']) ||
  
-        !isset($_POST['email']) ||
- 
-        !isset($_POST['service']) ||
+        !isset($_POST['product_service']) ||
  
         !isset($_POST['inquiry'])) {
  
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
  
-    }*/
+    }
  
      
  
@@ -54,7 +56,7 @@ if(isset($_POST['email'])) {
  
     $email_from = $_POST['email']; // required
  
-    $service = $_POST['service']; // not required
+    $product_service = $_POST['product_service']; // required
  
     $inquiry = $_POST['inquiry']; // required
  
