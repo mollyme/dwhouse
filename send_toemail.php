@@ -1,19 +1,16 @@
 <?php
- 
-if(isset($_POST['email'])) {
+
+if(isset($_POST['emailfrom'])) {
  
      
  
-    // Email and email subject where the information will be sent.
+    // Subject and email where the info is going to be sent
  
     $email_to = "dorsn.play@gmail.com";
  
     $email_subject = ($_POST['product_service']);
- 
-     
- 
-     
- 
+    
+
    function died($error) {
  
         // Error code
@@ -66,7 +63,7 @@ if(isset($_POST['email'])) {
  
     $company = $_POST['company']; // d
  
-    $email_from = $_POST['email']; // d
+    $email_from = $_POST['emailfrom']; // d
  
     $product_service = $_POST['product_service']; // d
  
@@ -130,7 +127,7 @@ if(isset($_POST['email'])) {
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
-    $email_message .= "Service / Product: ".clean_string($service_product)."\n";
+    $email_message .= "Service / Product: ".clean_string($product_service)."\n";
  
     $email_message .= "Inquiry: ".clean_string($inquiry)."\n";
  
@@ -149,13 +146,13 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
  
 
- echo $full_name;
+
  
  
-	/*--  html here */
+	/*-- success html here */
  
  
  
-echo "Thank you for contacting us. We will be in touch with you very soon".
+echo "Thank you for contacting us. We will be in touch with you very soon";
 	
-}?>
+} ?>
