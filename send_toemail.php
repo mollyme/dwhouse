@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>DWHOUSE - Solutions for Small Businesses -Contact Form</title>
+   <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
 <?php
 
 if(isset($_POST['emailfrom'])) {
@@ -153,10 +164,16 @@ $headers = 'From: '.$email_from."\r\n".
  
  
  
-echo "Thank you for contacting us. We will be in touch with you very soon";
-	
-<<<<<<< HEAD
+echo $success = "
+<div class=\"row\">
+    <div class=\"thankyou\">
+        <h3>Submission successful!</h3>
+        <p>Thank you for contacting us. We will be in touch with you very soon!</p>
+    </div>
+</div>
+";
+
 } ?>
-=======
-} ?>
->>>>>>> f883f97e26e5ff4ab6f8bb0cc55342eb50925ed0
+
+</body>
+</html>

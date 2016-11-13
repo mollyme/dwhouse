@@ -234,6 +234,15 @@ background-color:#2D3D50 !important;
 }
 
 
+.thankyou{
+	width:300px;
+    height:200px;
+    background: #2d3d50;
+    color:#ffffff;
+    font-size:150%;
+
+}
+
 @media only screen and (max-width : 767px) { /* mobile up to 767px wide --------------------- */
     
     .logo{width:30%; height:auto; display: block; margin:0 auto; margin-top:10px;}
