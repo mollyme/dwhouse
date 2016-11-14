@@ -96,7 +96,7 @@ if(isset($_POST['emailfrom'])) {
  
   if(!preg_match($string_exp,$full_name)) {
  
-    $error_message .= 'The Name you entered does not appear to be valid.<br />';
+    $error_message .= 'The name you entered does not appear to be valid.<br />';
  
   }
  
@@ -108,7 +108,7 @@ if(isset($_POST['emailfrom'])) {
  
   if(strlen($inquiry) < 2) {
  
-    $error_message .= 'The inquiry you entered do not appear to be valid.<br />';
+    $error_message .= 'The inquiry you entered does not appear to be valid.<br />';
  
   }
  
