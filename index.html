@@ -175,7 +175,7 @@
                				</small>
           				</div>
 						<div class="form-group">
-                			<label for="options">Choose your service </label>
+                			<label for="options">Choose your service/product </label>
                     		<select name="product_service" class="form-control">
                                 <option selected>Get Windows 10</option>
                                 <option value="1">Get Microsoft Office</option>
@@ -195,10 +195,11 @@
           				</div>
 						<button type="submit" class="btn btn-primary">Send</button>
         			</form>
-                    <?php if($error_message!=""){echo $error_message } 
-							else {echo $sucess;}?>
         		</div>
     		</div>
+</div>
+        
+        
     </section>
         <!-- end_of contact section -->
 	<footer>
@@ -223,5 +224,11 @@
      <!-- Scroll JavaScript -->
     <script src="js/npm.js"></script> 
 	<script src="js/scroll.js"></script> 
+    
+    <script>
+function goBack() {
+    window.history.back()
+}
+</script>
 </body>
 </html>

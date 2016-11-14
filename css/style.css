@@ -178,7 +178,7 @@ header{
 }
 
 h1{
-	font-family: 'headings';
+	font-family: 'headings', sans-serif;
     font-size: 5em;
     color:#2D3D50;
     position:absolute;
@@ -187,7 +187,7 @@ h1{
 }
 
 h2{
-	font-family: 'headings';
+	font-family: 'headings', sans-serif;
     font-size:250%;
     color:#2D3D50;
     text-align: center; 
@@ -195,7 +195,7 @@ h2{
 
 .highlight{
 	color:#4DB9C1;
-	font-family: 'headings'; /* forced: double check why span changed font-family */
+	font-family: 'headings', sans-serif; /* forced: double check why span changed font-family */
 }
 
 
@@ -234,14 +234,35 @@ background-color:#2D3D50 !important;
 }
 
 
+
 .thankyou{
-	width:300px;
-    height:200px;
+	max-width:420px;
     background: #2d3d50;
     color:#ffffff;
-    font-size:150%;
-
+    margin:0 auto;
+    padding:40px;
 }
+
+p{text-align: center!important;}
+    
+   .thankyou h4{ 
+       color:#4db9c1; 
+       text-align: center;  
+       font-size:200%;
+       margin:0 auto;
+       font-weight: bold;
+       margin-top:20px;
+}
+
+ .back{
+    	display: block; 
+    	margin:0 auto; 
+    	background:#4DB9C1;!important;
+     	border:1px solid #4db9c1;
+     	color:#ffffff;
+}
+
+
 
 @media only screen and (max-width : 767px) { /* mobile up to 767px wide --------------------- */
     

@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>DWHOUSE - Solutions for Small Businesses -Contact Form</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
@@ -167,12 +168,16 @@ $headers = 'From: '.$email_from."\r\n".
 echo $success = "
 <div class=\"row\">
     <div class=\"thankyou\">
-        <h3>Submission successful!</h3>
-        <p>Thank you for contacting us. We will be in touch with you very soon!</p>
+    <img src=\"images/success.png\" class=\"center\">
+        <h4>Thanks for reaching out!</h4>
+        <p>We will be in touch with you very soon.</p><br><br>
+        	<button type=\"button\" class=\"btn back\" onclick=\"goBack()\"> Back to home</button>
     </div>
 </div>
 ";
 
+    
+    
 } ?>
 
 </body>
