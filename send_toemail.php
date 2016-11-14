@@ -7,6 +7,7 @@
   <title>DWHOUSE - Solutions for Small Businesses -Contact Form</title>
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css"> 
+    
 </head>
 <body>
 
@@ -26,16 +27,30 @@ if(isset($_POST['emailfrom'])) {
    function died($error) {
  
         // Error code
+       
+       echo $display_error = "
+<div class=\"row\">
+    <div class=\"thankyou\">
+    <img src=\"images/error.png\" class=\"center\" alt=\"error\">
+        <h4>We are sorry!</h4>
+        <p class=\"errortext\">There were error(s) found with the form you submitted. These errors appear below.<br><br></p>";
+         echo $error."<br>";
+         echo "<p class=\"errortext\">Please go back and fix these errors.</p><br>";
+         
+        	echo "<button type=\"button\" class=\"btnback\" onclick=\"goBack()\"> Back to home</button>
+    </div>
+</div>
+";
  
-        echo "We are very sorry, but there were error(s) found with the form you submitted. <br> ";
+      /*  echo "We are very sorry, but there were error(s) found with the form you submitted. <br> ";
  
       	echo "These errors appear below.<br><br>"; 
  
         echo $error."<br><br>";
  
-        echo "Please go back and fix these errors.<br><br>";
- 
-        die();
+        echo "Please go back and fix these errors.<br><br>";*/
+       
+        die(); 
  
     }
 
@@ -89,7 +104,7 @@ if(isset($_POST['emailfrom'])) {
  
   if(!preg_match($email_exp,$email_from)) {
  
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    $error_message .= '<p>Email address does not appear to be valid.</p>';
  
   }
  
@@ -97,19 +112,19 @@ if(isset($_POST['emailfrom'])) {
  
   if(!preg_match($string_exp,$full_name)) {
  
-    $error_message .= 'The name you entered does not appear to be valid.<br />';
+    $error_message .= '<p>The name does not appear to be valid.<p/>';
  
   }
  
-  if(!preg_match($string_exp,$company)) {
+  if(!$company) {
  
-    $error_message .= 'The company name you entered does not appear to be valid.<br />';
+    $error_message .= '<p>Company name does not appear to be valid.<p/>';
  
-  }
+  } 
  
   if(strlen($inquiry) < 2) {
  
-    $error_message .= 'The inquiry you entered does not appear to be valid.<br />';
+    $error_message .= '<p>The inquiry does not appear to be valid.<p/>';
  
   }
  
@@ -179,7 +194,9 @@ echo $success = "
     
     
 } ?>
+
 <script src="js/goback.js"></script> 
      
+    
 </body>
 </html>

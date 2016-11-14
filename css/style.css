@@ -243,7 +243,8 @@ background-color:#2D3D50 !important;
     padding:40px;
 }
 
-p{text-align: center!important;}
+.thankyou p{text-align: center!important;}
+.errortext{color:#f79120;}
     
    .thankyou h4{ 
        color:#4db9c1; 
