@@ -171,7 +171,7 @@ echo $success = "
     <img src=\"images/success.png\" class=\"center\">
         <h4>Thanks for reaching out!</h4>
         <p>We will be in touch with you very soon.</p><br><br>
-        	<button type=\"button\" class=\"btn back\" onclick=\"goBack()\"> Back to home</button>
+        	<button type=\"button\" class=\"btnback\" onclick=\"goBack()\"> Back to home</button>
     </div>
 </div>
 ";
@@ -179,6 +179,10 @@ echo $success = "
     
     
 } ?>
-
+ <script>
+function goBack() {
+    window.history.back()
+}
+     
 </body>
 </html>

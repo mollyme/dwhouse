@@ -254,9 +254,16 @@ p{text-align: center!important;}
        margin-top:20px;
 }
 
- .back{
-    	display: block; 
+ .btnback{
+     	font-size: 14px;
+     	text-align: center;
+     	white-space: nowrap;
+    	vertical-align: middle;
+     	cursor: pointer;
+     	border-radius: 4px;
+		display: block; 
     	margin:0 auto; 
+     	padding:4px 10px;
     	background:#4DB9C1;!important;
      	border:1px solid #4db9c1;
      	color:#ffffff;
