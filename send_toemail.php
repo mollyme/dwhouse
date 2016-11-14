@@ -179,10 +179,7 @@ echo $success = "
     
     
 } ?>
- <script>
-function goBack() {
-    window.history.back()
-}
+<script src="js/goback.js"></script> 
      
 </body>
 </html>
