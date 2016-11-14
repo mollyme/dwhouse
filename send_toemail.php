@@ -10,7 +10,7 @@
     
 </head>
 <body>
-
+<script src="js/goback.js"></script> 
 <?php
 
 if(isset($_POST['emailfrom'])) {
@@ -30,15 +30,15 @@ if(isset($_POST['emailfrom'])) {
        
        echo $display_error = "
 <div class=\"row\">
-    <div class=\"thankyou\">
+    <a href=\"#\" onclick=\"goBack()\" title=\"Gobackinhistory\" class=\"error_note\"><div class=\"thankyou\">
     <img src=\"images/error.png\" class=\"center\" alt=\"error\">
         <h4>We are sorry!</h4>
         <p class=\"errortext\">There were error(s) found with the form you submitted. These errors appear below.<br><br></p>";
          echo $error."<br>";
          echo "<p class=\"errortext\">Please go back and fix these errors.</p><br>";
          
-        	echo "<button type=\"button\" class=\"btnback\" onclick=\"goBack()\"> Back to home</button>
-    </div>
+        	echo "<button type=\"button\" class=\"btnback\"> Back to home</button>
+    </div> </a>
 </div>
 ";
  
@@ -182,11 +182,12 @@ $headers = 'From: '.$email_from."\r\n".
  
 echo $success = "
 <div class=\"row\">
+<a href=\"#\" onclick=\"goBack()\" title=\"Gobackinhistory\" class=\"error_note\"><div class=\"thankyou\">
     <div class=\"thankyou\">
     <img src=\"images/success.png\" class=\"center\">
         <h4>Thanks for reaching out!</h4>
         <p>We will be in touch with you very soon.</p><br><br>
-        	<button type=\"button\" class=\"btnback\" onclick=\"goBack()\"> Back to home</button>
+        	<button type=\"button\" class=\"btnback\"> Back to home</button>
     </div>
 </div>
 ";
